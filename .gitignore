@@ -24,3 +24,5 @@ cmd/query/query
 cmd/query/query-*
 crossdock/crossdock-*
 run-crossdock.log
+*.vscode
+*.DS_Store

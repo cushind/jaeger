@@ -60,8 +60,8 @@ func TestNewSpanReaderIndexPrefix(t *testing.T) {
 		expected string
 	}{
 		{prefix: "", expected: ""},
-		{prefix: "foo", expected: "foo:"},
-		{prefix: ":", expected: "::"},
+		{prefix: "foo", expected: "foo"},
+		{prefix: ":", expected: ":"},
 	}
 	for _, testCase := range testCases {
 		client := &mocks.Client{}

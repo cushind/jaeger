@@ -221,6 +221,7 @@ func (c *Configuration) getConfigOptions() ([]elastic.ClientOptionFunc, error) {
 		httpClient.Transport = &http.Transport{
 			TLSClientConfig: ctlsConfig,
 		}
+		options = append(options, elastic.SetBasicAuth(c.Username, c.Password))
 	} else {
 		options = append(options, elastic.SetBasicAuth(c.Username, c.Password))
 	}

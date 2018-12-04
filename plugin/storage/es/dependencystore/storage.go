@@ -43,9 +43,6 @@ type DependencyStore struct {
 
 // NewDependencyStore returns a DependencyStore
 func NewDependencyStore(client es.Client, logger *zap.Logger, indexPrefix string) *DependencyStore {
-	if indexPrefix != "" {
-		indexPrefix += ":"
-	}
 	return &DependencyStore{
 		ctx:                   context.Background(),
 		client:                client,

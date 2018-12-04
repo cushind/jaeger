@@ -116,9 +116,6 @@ func NewSpanReader(p SpanReaderParams) spanstore.Reader {
 
 func newSpanReader(p SpanReaderParams) *SpanReader {
 	ctx := context.Background()
-	if p.IndexPrefix != "" {
-		p.IndexPrefix += ":"
-	}
 	return &SpanReader{
 		ctx:                     ctx,
 		client:                  p.Client,

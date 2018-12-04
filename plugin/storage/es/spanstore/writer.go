@@ -82,9 +82,6 @@ func NewSpanWriter(p SpanWriterParams) *SpanWriter {
 
 	// TODO: Configurable TTL
 	serviceOperationStorage := NewServiceOperationStorage(ctx, p.Client, p.Logger, time.Hour*12)
-	if p.IndexPrefix != "" {
-		p.IndexPrefix += ":"
-	}
 	return &SpanWriter{
 		ctx:    ctx,
 		client: p.Client,
